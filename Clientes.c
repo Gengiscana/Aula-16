@@ -22,7 +22,7 @@ void main(){
 	}
 	char linha[100];
 	fgets(linha, 100, arquivo);
-	while(fgets(linha, sizeof(linha), arquivo) != NULL){
+	while(fgets(linha, 100, arquivo) != NULL){
 		if(sscanf(linha, "%[^;];%d;%c", clientes[total_clientes].nome, &clientes[total_clientes].idade, &clientes[total_clientes].sexo) == 3){
 			soma_idade_total += clientes[total_clientes].idade;
 			if(clientes[total_clientes].sexo == 'M' || clientes[total_clientes].sexo == 'm'){
